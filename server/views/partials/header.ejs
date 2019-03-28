@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= title %></title>
     <!-- CSS Section-->
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/Content/app.css" />
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="Content/app.css" />
   </head>
   <body>
     
@@ -76,6 +76,15 @@
                  </li>
              
              </ul>
+             <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> 
+              Welcome, <%= displayName %></li>
+            <li class="nav-item"><a href="/logout" class="nav-link">
+              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+          <% } else { %>
+            <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+          <% } %>
          </div>
        </nav>
      </header>
