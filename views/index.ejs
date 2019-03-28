@@ -1,0 +1,35 @@
+
+<!-- Main page/Home page File -->
+
+<!-- Adds header and footer from the partials folder-->
+<% include ./partials/header.ejs %>
+<main>
+
+  <!-- Home Page -- Content Area -->
+  <% if(title=="Home") { %>
+  
+    <div class="container text-center text-white" style="background-image: url(https://www.newgenapps.com/hs-fs/hubfs/canvas/images/parallax/Website-Design-Background.png?width=1920&name=Website-Design-Background.png); background-repeat:yes-repeat; max-width: 100%;">
+      <h1 class="display-4"><strong> BHAVNA PULLIAHGARI</strong></h1>
+      <hr class="my-4">
+      <br>
+      <p class="lead"><strong>Welcome to my portfolio !!</strong></p>
+      <br>
+      <p>
+        <h1>For me, Life is all about finding Joy in little things and to Welcome each life experience as an oppurtunity
+          to Learn and Grow</h1>
+      </p>
+      <br><br><br><br>
+      <hr>
+      <br>
+      <a class="btn btn-outline-dark btn-lg" href="/about" role="button">Click here to know more</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  
+  <%} %>
+</main>
+
+<% include ./partials/footer.ejs %>

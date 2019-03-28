@@ -1,0 +1,43 @@
+{
+  "name": "comp308-w2019-assignment02",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "^10.15.0",
+    "npm": "^6.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "font-awesome": "^4.7.0",
+    "http-errors": "~1.6.2",
+    "jquery": "^3.3.1",
+    "morgan": "~1.9.0",
+    "popper.js": "^1.14.7"
+  },
+  "description": "Personal Portfolio Project",
+  "main": "server.js",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/express": "^4.16.1",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^10.12.26"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhavnaP/COMP308-W2019-Assignment02.git"
+  },
+  "author": "Bhavna Pulloiahgari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BhavnaP/COMP308-W2019-Assignment02/issues"
+  },
+  "homepage": "https://github.com/BhavnaP/COMP308-W2019-Assignment02#readme"
+}

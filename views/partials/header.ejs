@@ -1,0 +1,82 @@
+
+<!-- Header content -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= title %></title>
+    <!-- CSS Section-->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="Content/app.css" />
+  </head>
+  <body>
+    
+    <header>
+      <!-- Main Navigation Bar-->
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(34, 33, 33)">
+         <a class="navbar-brand" href="/">
+         <!-- Icon/Logo for the website - with initials B and P -->
+             <img src="./Assets/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt=""> PORTFOLIO</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+            <!-- Navigation bar with links to 5 different pages - Home, About, SProjects, Services and Contact -->
+            
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav ml-auto">
+
+              <% if(title=="Home") { %>}
+              <li class="nav-item active">
+                <% } else { %>
+                </li>
+              <li class="nav-item">
+                <%} %>
+                     <a class="nav-link" href="/"><i class="fa fa-lg fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                 </li>
+
+                 <% if(title=="About") { %>}
+                 <li class="nav-item active">
+                   <% } else { %>
+                   </li>
+                 <li class="nav-item">
+                   <%} %>
+                     <a class="nav-link" href="/about"><i class="fa fa-lg fa-user-circle"></i> About</a>
+                 </li>
+
+                 <% if(title=="Projects") { %>}
+                 <li class="nav-item active">
+                   <% } else { %>
+                   </li>
+                 <li class="nav-item">
+                   <%} %>
+                     <a class="nav-link" href="/projects"><i class="fa fa-lg fa-tasks" aria-hidden="true"></i> Projects</a>
+                 </li>
+
+                   <% if(title=="Services") { %>}
+                   <li class="nav-item active">
+                     <% } else { %>
+                     </li>
+                   <li class="nav-item">
+                     <%} %>
+                     <a class="nav-link" href="/services"><i class="fa fa-lg fa-cogs"></i> Services</a>
+                 </li>
+
+                 <% if(title=="Contact") { %>}
+                 <li class="nav-item active">
+                   <% } else { %>
+                   </li>
+                 <li class="nav-item">
+                   <%} %>
+                     <a class="nav-link" href="/contact"><i class="fa fa-lg fa-phone-square"></i> Contact</a>
+                 </li>
+             
+             </ul>
+         </div>
+       </nav>
+     </header>
+     

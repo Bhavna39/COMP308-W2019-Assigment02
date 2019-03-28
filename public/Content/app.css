@@ -1,0 +1,30 @@
+/**********************************/
+/*          CSS File              */
+/*      Bhavna Pulliahgari        */
+/*          300931671             */
+/*       16th February, 2019      */
+/**********************************/
+
+/* custom css */
+/* used custom css for porjects page*/
+.img-with-text {
+  text-align: justify;
+  width: [width of img];
+}
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto;
+}
+
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+li {
+  padding: 10px;
+  overflow: auto;
+}
+h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}

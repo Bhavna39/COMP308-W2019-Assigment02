@@ -1,0 +1,35 @@
+
+<!-- Adds header and footer from the partials folder-->
+<% include ./partials/header.ejs %>   
+
+<!-- Contact Page -- Content Area -->
+    <!-- Contact Page with contact information and a UI for feedback/query form -->
+<% if(title=="Contact") { %>
+    <div class="container text-white text-center"
+      style="background-image: url(https://www.deentutors.com/wp-content/uploads/2018/06/Contact-us-2.jpg); background-repeat:yes-repeat; max-width:100%;">
+      <p style="font-size:22px;"><strong>CONTACT FORM</strong></p>
+      <hr class="my-4">
+      <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                   <br>
+                   <p align="left"><strong><i class="fa fa-phone fa-2x" aria-hidden="true"></i>&nbsp&nbsp&nbsp&nbsp&nbsp+1 6476470101</br><i class="fa fa-envelope fa-2x" aria-hidden="true"></i>&nbsp&nbsp&nbsp&nbspbhavnapulliahgari@gmail.com  </strong></p>   
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="First Name" required="required" data-error="Firstname is required.">
+                    <br>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Last Name" required="required" data-error="Lastname is required.">
+                    <br>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Valid email is required.">
+                    <br>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-5">
+              <a class="btn btn-outline-light btn-lg" href="/" role="button">Send Message</a><br><br><br><br><br><br>
+            </div>
+        </div>
+    </div>
+  <%} %>
+
+  <% include ./partials/footer.ejs %>
