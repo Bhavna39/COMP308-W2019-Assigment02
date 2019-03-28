@@ -2,8 +2,20 @@
 let express = require("express");
 let router = express.Router();
 
+let jwt = require('jsonwebtoken');
+
+let passport = require('passport');
+
 // reference to db schema - in model folder(class for db struct)
 let contactController = require('../controllers/contact');
+
+function requireAuth(req, res, next) {
+    // check if the user is logged in
+    if(!req.isAuthenticated()) {
+        return res.redirect('/login');
+    }
+    next();
+}
 
 /* GET Contact List page - Read operation */
 router.get("/", contactController.displayContactList);

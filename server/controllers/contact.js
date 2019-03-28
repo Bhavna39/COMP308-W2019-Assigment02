@@ -11,18 +11,13 @@ module.exports.displayContactList = (req, res, next) => {
     } else {
       // console.log(contactList);
 
-      res.render("contacts/index", {
-        title: 'Contact List',
-        contactList: contactList
-      });
+      res.json({success: true, msg: 'Contact List Displayed Successfully', contactList: contactList, user: req.user}); 
     }
   });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-  res.render("contacts/add", {
-    title: "Add New Contact"
-  });
+  res.json({success: true, msg: 'Successfully Displayed Add page'});
 }
 
 module.exports.processAddPage = (req, res, next) => {
@@ -40,7 +35,7 @@ module.exports.processAddPage = (req, res, next) => {
       res.end(err);
     } else {
       //refresh the contact list
-      res.redirect("/contact-list");
+      res.json({success: true, msg: 'Successfully Added new contact'});
     }
   });
 }
@@ -54,10 +49,7 @@ module.exports.displayEditPage = (req, res, next) => {
       res.end(err);
     } else {
       // show the edit page
-      res.render("contacts/edit", {
-        title: "Edit Contact",
-        contact: contactObject
-      });
+      res.json({success: true, msg: 'Successfully Displayed Contact to Edit', contact: contactObject});
     }
   });
 }
@@ -78,7 +70,7 @@ module.exports.processEditPage = (req, res, next) => {
       res.end(err);
     } else {
       //refresh the contact list
-      res.redirect("/contact-list");
+      res.json({success: true, msg: 'Successfully Edited Contact', contact: updatedContact});
     }
   });
 }
@@ -92,7 +84,7 @@ module.exports.performDelete = (req, res, next) => {
         res.end(err);
       } else {
         //refresh contact list
-        res.redirect("/contact-list");
+        res.json({success: true, msg: 'Successfully Deleted Contact'});
       }
     });
   }
