@@ -1,0 +1,39 @@
+<div class="container text-white" style="background-image: url(https://www.deentutors.com/wp-content/uploads/2018/06/Contact-us-2.jpg); background-repeat:yes-repeat; max-width:100%; max-height:100%;">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1>Contact List</h1>
+            <a class="btn btn-info" routerLink="/contact-list/add" role="button">
+            <i class="fa fa-plus-circle"></i> Add a Contact</a>
+            <br><br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr class="text-white">
+                    <th class="text-center">First Name</th>
+                    <th class="text-center">Last Name</th>
+                    <th class="text-center">Age</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+                    <tr *ngFor="let contact of contacts">
+                        <td class="text-center">{{ contact.firstName }}</td>
+                        <td class="text-center">{{ contact.lastName }}</td>
+                        <td class="text-center">{{ contact.age }}</td>
+
+                        <td class="text-center">
+                        <a routerLink="/contact-list/edit/{{ contact._id }}"
+                            class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+
+                        <td class="text-center">
+                                <a routerLink="/contact-list/delete/{{ contact._id }}"
+                                    class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+                                </td>
+                    </tr>
+            </table>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        </div>
+    </div>
+</div>

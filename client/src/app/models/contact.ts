@@ -1,7 +1,7 @@
 export class Contact {
 // tslint:disable-next-line: variable-name
   _id: string;
-  firtsName: string;
-  lastnName: string;
+  firstName: string;
+  lastName: string;
   age: number;
 }
