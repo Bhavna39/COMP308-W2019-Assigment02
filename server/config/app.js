@@ -101,6 +101,9 @@ app.use("/api", indexRouter);
 app.use("/api/contact-list", contactRouter); // protect this section
 
 //capture - random links/ inccorect url - redirect to home page
+app.get('*', (req, res)=>{
+  res.sendfile(path.join(__dirname, '../../public/index.html'));
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
