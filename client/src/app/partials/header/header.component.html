@@ -1,6 +1,6 @@
  <!-- Main Navigation Bar-->
  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(34, 33, 33)">
-  <a class="navbar-brand" href="/">
+  <a class="navbar-brand" routerLink="/">
   <!-- Icon/Logo for the website - with initials B and P -->
       <img src="assets/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt=""> PORTFOLIO</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -14,42 +14,42 @@
 
        <li class="nav-item">
 
-              <a class="nav-link" href="/"><i class="fa fa-lg fa-home"></i> Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" routerLink="/"><i class="fa fa-lg fa-home"></i> Home <span class="sr-only">(current)</span></a>
           </li>
 
 
 
           <li class="nav-item">
 
-              <a class="nav-link" href="/about"><i class="fa fa-lg fa-user-circle"></i> About</a>
+              <a class="nav-link" routerLink="/about"><i class="fa fa-lg fa-user-circle"></i> About</a>
           </li>
 
 
           <li class="nav-item">
 
-              <a class="nav-link" href="/projects"><i class="fa fa-lg fa-tasks" aria-hidden="true"></i> Projects</a>
+              <a class="nav-link" routerLink="/projects"><i class="fa fa-lg fa-tasks" aria-hidden="true"></i> Projects</a>
           </li>
 
 
             <li class="nav-item">
 
-              <a class="nav-link" href="/services"><i class="fa fa-lg fa-cogs"></i> Services</a>
+              <a class="nav-link" routerLink="/services"><i class="fa fa-lg fa-cogs"></i> Services</a>
           </li>
 
 
           <li class="nav-item">
 
-              <a class="nav-link" href="/contact"><i class="fa fa-lg fa-phone-square"></i> Contact</a>
+              <a class="nav-link" routerLink="/contact"><i class="fa fa-lg fa-phone-square"></i> Contact</a>
           </li>
       <!--
           <% if(typeof displayName == 'string' && displayName) { %>
             <li class="navbar-text"><i class="fas fa-lg fa-user"></i>
        -->
 
-            <li class="nav-item"><a href="/logout" class="nav-link">
+            <li class="nav-item"><a routerLink="/logout" class="nav-link">
               <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
 
-            <li class="nav-item"><a href="/login" class="nav-link">
+            <li class="nav-item"><a routerLink="/login" class="nav-link">
               <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
 
       </ul>
