@@ -24,11 +24,16 @@ export class ContactListComponent implements OnInit {
 
     this.displayContactList();
   }
+
+  private onDeleteClick(): void {
+    if(!confirm('Are You Sure?')) {
+      this.router.navigate(['/contact/contact-list']);
+    }
+  }
+
   displayContactList(): void {
     this.contactListService.getList().subscribe(data => {
-      if(data.success) {
-        // read data from db on inspect - testing
-        console.log(data);
+      if (data.success) {
         this.contacts = data.contactList;
       } else {
         this.flashMessage.show('User must be logged in', {cssClass: 'alert-danger', timeOut: 3000});
