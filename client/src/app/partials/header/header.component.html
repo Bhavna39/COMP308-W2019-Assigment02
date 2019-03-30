@@ -18,32 +18,32 @@
 
        <li class="nav-item">
 
-              <a class="nav-link" routerLink="/" routerLinkActive="active"><i class="fa fa-lg fa-home"></i> Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" routerLink="/"><i class="fa fa-lg fa-home"></i> Home <span class="sr-only">(current)</span></a>
           </li>
 
 
 
           <li class="nav-item">
 
-              <a class="nav-link" routerLink="/about" routerLinkActive="active"><i class="fa fa-lg fa-user-circle"></i> About</a>
+              <a class="nav-link" routerLink="/about"><i class="fa fa-lg fa-user-circle"></i> About</a>
           </li>
 
 
           <li class="nav-item">
 
-              <a class="nav-link" routerLink="/projects" routerLinkActive="active"><i class="fa fa-lg fa-tasks" aria-hidden="true"></i> Projects</a>
+              <a class="nav-link" routerLink="/projects"><i class="fa fa-lg fa-tasks" aria-hidden="true"></i> Projects</a>
           </li>
 
 
             <li class="nav-item">
 
-              <a class="nav-link" routerLink="/services" routerLinkActive="active"><i class="fa fa-lg fa-cogs"></i> Services</a>
+              <a class="nav-link" routerLink="/services"><i class="fa fa-lg fa-cogs"></i> Services</a>
           </li>
 
 
           <li class="nav-item">
 
-              <a class="nav-link" routerLink="/contact" routerLinkActive="active"><i class="fa fa-lg fa-phone-square"></i> Contact</a>
+              <a class="nav-link" routerLink="/contact"><i class="fa fa-lg fa-phone-square"></i> Contact</a>
           </li>
 
             <li *ngIf="isLoggedIn()" class="nav-item"><a (click)="onLogoutClick()" routerLink="/logout" class="nav-link">
