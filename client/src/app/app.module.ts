@@ -1,3 +1,4 @@
+
 // modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -28,6 +29,9 @@ import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete
 import { FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
 import { AuthService } from './services/auth.service';
 import { JwtModule, JwtHelperService, JwtInterceptor} from '@auth0/angular-jwt';
+
+// route guards
+import { AuthGuard } from './guards/auth.guard';
 
 export function jwtTokenGetter() {
   return localStorage.getItem('id_token');
@@ -63,7 +67,7 @@ export function jwtTokenGetter() {
       }
     })
   ],
-  providers: [FlashMessagesService],
+  providers: [FlashMessagesService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
