@@ -26,7 +26,7 @@ export class ContactListComponent implements OnInit {
   }
 
   private onDeleteClick(): void {
-    if(!confirm('Are You Sure?')) {
+    if (!confirm('Are You Sure?')) {
       this.router.navigate(['/contact/contact-list']);
     }
   }

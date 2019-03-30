@@ -40,7 +40,7 @@ contact: Contact;
     });
   }
 
-  private onDetailsPageSubmit(): void {
+   onDetailsPageSubmit(): void {
 switch (this.title) {
   case 'Add Contact':
   this.contactListService.addContact(this.contact).subscribe(data => {
