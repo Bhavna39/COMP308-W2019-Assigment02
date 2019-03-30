@@ -37,8 +37,8 @@ export class AuthService {
       return  this.http.post<any>(this.endpoint + 'login', user, this.httpOptions);
    }
 
-   public storerUserData(token: any, user: User): void {
-     localStorage.setItem('id_token', 'Bearer' + token);
+   public storeUserData(token: any, user: User): void {
+     localStorage.setItem('id_token', 'Bearer ' + token);
      localStorage.setItem('user', JSON.stringify(user));
      this.authToken = token;
      this.user = user;
@@ -53,6 +53,6 @@ export class AuthService {
  }
 
  public loggedIn(): boolean {
-   return this.jwtService.isTokenExpired(this.authToken);
+   return !this.jwtService.isTokenExpired(this.authToken);
  }
 }
