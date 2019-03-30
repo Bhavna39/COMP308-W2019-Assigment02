@@ -31,7 +31,7 @@ user: User;
 
   isLoggedIn(): boolean {
     const result = this.authService.loggedIn();
-    if (result){
+    if (result) {
     this. user = JSON.parse(localStorage.getItem('user'));
     }
     return result;

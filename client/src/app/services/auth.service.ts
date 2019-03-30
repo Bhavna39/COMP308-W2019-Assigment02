@@ -44,15 +44,15 @@ export class AuthService {
      this.user = user;
  }
 
- public logout(): Observable<any> {
-   this.authToken = null;
-   this.user = null;
-   localStorage.clear();
+    public logout(): Observable<any> {
+      this.authToken = null;
+      this.user = null;
+      localStorage.clear();
 
-   return this.http.get<any>(this.endpoint + 'logout', this.httpOptions);
- }
+      return this.http.get<any>(this.endpoint + 'logout', this.httpOptions);
+    }
 
- public loggedIn(): boolean {
-   return !this.jwtService.isTokenExpired(this.authToken);
- }
+    public loggedIn(): boolean {
+      return !this.jwtService.isTokenExpired(this.authToken);
+    }
 }
