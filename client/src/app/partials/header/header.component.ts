@@ -20,17 +20,20 @@ user: User;
 
   ngOnInit() {
     this.user = new User();
-    this. user = JSON.parse(localStorage.getItem('user'));
   }
 
   onLogoutClick(): void {
     this.authService.logout().subscribe(data => {
-      this.flashMessage.show(data.msg, {cssclass: 'alert-warning', timeOut: 5000});
+      this.flashMessage.show(data.msg, {cssClass: 'alert-warning', timeOut: 5000});
       this.router.navigate(['/login']);
     });
   }
 
   isLoggedIn(): boolean {
-    return this.authService.loggedIn();
+    const result = this.authService.loggedIn();
+    if (result){
+    this. user = JSON.parse(localStorage.getItem('user'));
+    }
+    return result;
   }
 }

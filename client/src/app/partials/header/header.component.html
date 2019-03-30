@@ -8,8 +8,8 @@
       <span class="navbar-toggler-icon"></span>
   </button>
 
-  <li *ngIf="isLoggedIn()" class="navbar-text text-white ml-2 mr-5 d-none d-lg-inline">
-        <i class="fas fa-lg fa-id-badge"></i> Welcome, {{ user.displayName }}</li>
+  <li *ngIf="isLoggedIn()" class="navbar-text text-white mr-5 d-none d-lg-inline">
+        <button class="btn btn-outline-secondary active" style="background-color:rgb(34, 33, 33)" aria-pressed="true"><i class="fas fa-lg fa-id-badge"></i> Welcome, {{ user.displayName }}</button></li>
 
      <!-- Navigation bar with links to 5 different pages - Home, About, SProjects, Services and Contact -->
 
