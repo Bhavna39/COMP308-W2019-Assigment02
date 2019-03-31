@@ -5,7 +5,7 @@ style="background-image: url(https://www.deentutors.com/wp-content/uploads/2018/
 <hr class="my-4">
 <div class="row">
 <div class="col col-md-6">
- <h6 *ngIf="!isLoggedIn()" class="card-header alert-warning"><i class="fas fa-lock" style="color:brown"></i> Please Login to access Contact details --> <a class="btn btn-outline-dark btn-sm" routerLink="/login" role="button"><i class="fas fa-lg fa-sign-in-alt"></i> Login</a></h6>
+ <h6 *ngIf="!isLoggedIn()" class="card-header alert-warning"><i class="fas fa-lock" style="color:red"></i> Please Login to access Contact details <a class="btn btn-light btn-outline-dark btn-sm" routerLink="/login" role="button"><i class="fas fa-lg fa-sign-in-alt"></i> Login</a></h6>
   </div></div>
   <div *ngIf="isLoggedIn()" class="container">
       <div class="row">
@@ -39,6 +39,6 @@ style="background-image: url(https://www.deentutors.com/wp-content/uploads/2018/
       </div>
       <br>
       <div class="col-md-5">
-        <a class="btn btn-outline-light btn-lg" routerLink="/" role="button">Send Message</a><br><br><br><br><br><br>
+        <a class="btn btn-light btn-outline-dark btn-lg" routerLink="/" role="button">Send Message</a><br><br><br><br><br><br>
       </div>
   </div>
