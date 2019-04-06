@@ -1,3 +1,10 @@
+/*
+Contact Delete
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contact';
 import { ContactListService } from 'src/app/services/contact-list.service';

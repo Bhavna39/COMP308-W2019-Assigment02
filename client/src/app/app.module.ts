@@ -1,5 +1,11 @@
+/*
+App module
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
 
-// modules
+// Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
@@ -25,12 +31,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
 import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete.component';
 
-// services
+// Services
 import { FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
 import { AuthService } from './services/auth.service';
 import { JwtModule, JwtHelperService, JwtInterceptor} from '@auth0/angular-jwt';
 
-// route guards
+// Route Guards
 import { AuthGuard } from './guards/auth.guard';
 
 export function jwtTokenGetter() {

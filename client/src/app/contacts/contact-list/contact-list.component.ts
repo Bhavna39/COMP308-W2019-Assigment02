@@ -1,3 +1,10 @@
+/*
+Contact List
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { ContactListService } from 'src/app/services/contact-list.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
@@ -25,12 +32,14 @@ export class ContactListComponent implements OnInit {
     this.displayContactList();
   }
 
+  // warning before delete action
   private onDeleteClick(): void {
     if (!confirm('Are You Sure?')) {
       this.router.navigate(['/contact/contact-list']);
     }
   }
 
+  // Contact list display after the user is logged in
   displayContactList(): void {
     this.contactListService.getList().subscribe(data => {
       if (data.success) {

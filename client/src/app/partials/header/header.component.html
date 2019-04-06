@@ -1,4 +1,11 @@
- <!-- Main Navigation Bar-->
+ <!--
+Header - HTML
+Bhavna Pulliahgari
+300931671
+04/06/2019
+-->
+
+<!-- Main Navigation Bar-->
  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(34, 33, 33)">
   <a class="navbar-brand" routerLink="/">
   <!-- Icon/Logo for the website - with initials B and P -->
@@ -46,6 +53,7 @@
               <a class="nav-link" routerLink="/contact"><i class="fa fa-lg fa-phone-square"></i> Contact</a>
           </li>
 
+          <!-- if user is logged in, replace login button to logout-->
             <li *ngIf="isLoggedIn()" class="nav-item"><a (click)="onLogoutClick()" routerLink="/logout" class="nav-link">
               <i class="fas fa-lg fa-sign-out-alt" style="color:brown"></i> Logout</a></li>
 

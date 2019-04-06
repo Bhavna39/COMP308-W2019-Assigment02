@@ -1,3 +1,10 @@
+/*
+Contact - Component
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { AuthService } from './../../services/auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';

@@ -1,3 +1,10 @@
+/*
+Register page - component
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
@@ -22,6 +29,7 @@ user: User;
     this.user = new User();
   }
 
+  // Checking a new user is registered with accurate information entered in the fields for a successful registration
   onRegisterSubmit(): void {
     this.authService.registerUser(this.user).subscribe(data => {
       if (data.success) {

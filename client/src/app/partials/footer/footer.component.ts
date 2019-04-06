@@ -1,3 +1,10 @@
+/*
+Footer - component
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +17,7 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
+  // get updated date for every year
   ngOnInit() {
     const date = new Date();
     this.year = date.getFullYear();

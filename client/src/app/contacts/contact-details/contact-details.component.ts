@@ -1,3 +1,10 @@
+/*
+Contact details
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contact';
 import { ContactListService } from 'src/app/services/contact-list.service';
@@ -33,6 +40,7 @@ contact: Contact;
     }
   }
 
+  // get contact details
   private getContact(contact: Contact): void {
     this.contactListService.getContact(contact).subscribe(data => {
       this.contact = data.contact;
@@ -40,6 +48,7 @@ contact: Contact;
     });
   }
 
+  // switch case for add contact and edit contact details
    onDetailsPageSubmit(): void {
 switch (this.title) {
   case 'Add Contact':

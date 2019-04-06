@@ -1,3 +1,10 @@
+/*
+user - js
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 // require modules for our User Model
 let mongoose = require("mongoose");
 let passportLocalMongoose = require("passport-local-mongoose");

@@ -1,3 +1,10 @@
+/*
+Login Page - component
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from 'src/app/services/auth.service';
@@ -21,6 +28,7 @@ user = new User();
   ngOnInit() {
     this.user = new User();  }
 
+    // successful and unsuccesful login response
     onLoginSubmit(): void {
       this.authService.authenticateUser(this.user).subscribe(data => {
         if (data.success) {

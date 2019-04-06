@@ -1,3 +1,10 @@
+/*
+Auth Service
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -38,6 +45,7 @@ export class AuthService {
       return  this.http.post<any>(this.endpoint + 'login', user, this.httpOptions);
    }
 
+   // local storgae of the user logged in
    public storeUserData(token: any, user: User): void {
      localStorage.setItem('id_token', 'Bearer ' + token);
      localStorage.setItem('user', JSON.stringify(user));
@@ -45,6 +53,7 @@ export class AuthService {
      this.user = user;
  }
 
+ // login and logout sessions of the user
     public logout(): Observable<any> {
       this.authToken = null;
       this.user = null;

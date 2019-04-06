@@ -1,3 +1,10 @@
+/*
+Contact list - service
+Bhavna Pulliahgari
+300931671
+04/06/2019
+*/
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -31,11 +38,14 @@ private httpOptions = {
       return this.http.get<any>(this.endpoint, this.httpOptions);
    }
 
+   // get contact details
    public getContact(contact: Contact): Observable<any> {
     this.loadToken();
     return this.http.get<any>(this.endpoint + 'edit/' + contact._id, this.httpOptions);
   }
 
+
+  // add, edit, delete conact list
    public addContact(contact: Contact): Observable<any> {
     this.loadToken();
     return this.http.post<any>(this.endpoint + 'add', contact, this.httpOptions);
@@ -51,6 +61,8 @@ private httpOptions = {
     return this.http.get<any>(this.endpoint + 'delete/' + contact._id, this.httpOptions);
   }
 
+
+  // authentication
   private loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
